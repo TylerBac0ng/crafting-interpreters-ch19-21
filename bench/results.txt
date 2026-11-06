@@ -1,0 +1,73 @@
+== 20.3 hash table ==
+hits by size (string keys, ns per lookup)
+        10 keys (capacity       16):   10.6
+       100 keys (capacity      256):   10.7
+      1000 keys (capacity     2048):   16.2
+     10000 keys (capacity    16384):   30.9
+    100000 keys (capacity   262144):   86.4
+   1000000 keys (capacity  2097152):  120.9
+hits vs misses (100000 string keys, ns per lookup)
+  hits:     76.5
+  misses:   76.3
+load factor (string keys, ns per lookup)
+  load 0.750: hit  36.3, miss  93.1
+  load 0.375: hit  23.3, miss  31.1
+inserts from empty (string keys, ns per insert)
+      1000 keys:   49.0
+    100000 keys:  157.8
+   1000000 keys:  196.0
+key length (ns per lookup, ns to intern an existing string)
+      8 chars: lookup  21.2, intern     27.8
+     64 chars: lookup  21.0, intern     95.1
+   1024 chars: lookup  25.2, intern   1237.5
+churn (10000 live number keys, add one and delete the oldest)
+  start: capacity 16384
+  after  5000000:  108.8 ns per pair, capacity 32768, bytes 1048576
+  after 10000000:  116.4 ns per pair, capacity 32768, bytes 1048576
+  after 15000000:  104.7 ns per pair, capacity 32768, bytes 1048576
+  after 20000000:  115.7 ns per pair, capacity 32768, bytes 1048576
+colliding keys (2000 string keys, ns per operation)
+  normal keys:    insert     94.5, hit     20.8
+  colliding keys: insert  16419.5, hit   9092.1
+number keys 0..n-1 (ns per operation)
+    1000 keys: insert     76.0, hit     22.5
+   20000 keys: insert     77.5, hit     31.6
+Value keys vs ObjString* keys (ns per lookup)
+  entry size: 32 vs 24 bytes
+     100 keys: Value  10.7, ObjString*   3.7
+  100000 keys: Value  86.7, ObjString*  37.1
+
+== 20.1 number keys with Lua's hash ==
+number keys 0..n-1 (ns per operation)
+    1000 keys: insert   8564.0, hit   4318.9
+   20000 keys: insert   1193.5, hit    465.0
+
+== 20.3 churn with the book's rule for growing ==
+churn (10000 live number keys, add one and delete the oldest)
+  start: capacity 16384
+  after  5000000:  161.8 ns per pair, capacity 2097152, bytes 67108864
+  after 10000000:  178.5 ns per pair, capacity 4194304, bytes 134217728
+  after 15000000:  194.9 ns per pair, capacity 8388608, bytes 268435456
+  after 20000000:  183.1 ns per pair, capacity 8388608, bytes 268435456
+
+== 21.2 indexed slots ==
+run time
+    8 globals:   13.5 ns per statement (0 constants)
+  200 globals:   12.9 ns per statement (0 constants)
+compile time
+  250 uses of one name:    75.4 ns per use (0 constants)
+  250 different names:    111.1 ns per use (0 constants)
+
+== 21.1 hash table, constants reused ==
+run time
+    8 globals:   37.5 ns per statement (8 constants)
+  200 globals:   43.9 ns per statement (200 constants)
+compile time
+  250 uses of one name:    70.0 ns per use (1 constants)
+  250 different names:    156.7 ns per use (250 constants)
+
+== hash table, no constants reused ==
+run time: too many constants to compile
+compile time
+  250 uses of one name:    69.3 ns per use (250 constants)
+  250 different names:     80.3 ns per use (250 constants)

@@ -1,0 +1,40 @@
+(-1 + 2) * 3 - -4
+expression()
+| parsePrecedence(PREC_ASSIGNMENT)
+| | grouping() '('
+| | | expression()
+| | | | parsePrecedence(PREC_ASSIGNMENT)
+| | | | | unary() '-'
+| | | | | | parsePrecedence(PREC_UNARY)
+| | | | | | | number() '1'
+| | | | | binary() '+'
+| | | | | | parsePrecedence(PREC_FACTOR)
+| | | | | | | number() '2'
+| | binary() '*'
+| | | parsePrecedence(PREC_UNARY)
+| | | | number() '3'
+| | binary() '-'
+| | | parsePrecedence(PREC_FACTOR)
+| | | | unary() '-'
+| | | | | parsePrecedence(PREC_UNARY)
+| | | | | | number() '4'
+7
+
+1 < 2 ? 3 : 4 + 5
+expression()
+| parsePrecedence(PREC_ASSIGNMENT)
+| | number() '1'
+| | binary() '<'
+| | | parsePrecedence(PREC_TERM)
+| | | | number() '2'
+| | conditional() '?'
+| | | expression()
+| | | | parsePrecedence(PREC_ASSIGNMENT)
+| | | | | number() '3'
+| | | parsePrecedence(PREC_CONDITIONAL)
+| | | | number() '4'
+| | | | binary() '+'
+| | | | | parsePrecedence(PREC_FACTOR)
+| | | | | | number() '5'
+3
+

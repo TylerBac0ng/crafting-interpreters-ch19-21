@@ -1,0 +1,75 @@
+3
+beignets
+nil
+again
+assign
+assign
+6
+kept
+Undefined variable 'missing'.
+[line 1] in script
+Undefined variable 'missing'.
+[line 1] in script
+Undefined variable 'self'.
+[line 1] in script
+Undefined variable 'missing'.
+[line 1] in script
+now defined
+Undefined variable 'later'.
+[line 1] in script
+1
+[line 1] Error at '*': Expect ';' after variable declaration.
+[line 1] Error at '=': Invalid assignment target.
+[line 1] Error at '=': Invalid assignment target.
+[line 1] Error at '1': Expect variable name.
+[line 1] Error at ';': Expect expression.
+[line 1] Error at 'print': Expect ';' after value.
+[line 1] Error at end: Expect ';' after variable declaration.
+1000 uses of a: 1 constants
+[line 1] Error at 'v256': Too many constants in one chunk.
+[line 1] Error at 'v257': Too many constants in one chunk.
+[line 1] Error at 'v258': Too many constants in one chunk.
+[line 1] Error at 'v259': Too many constants in one chunk.
+[line 1] Error at 'v260': Too many constants in one chunk.
+[line 1] Error at 'v261': Too many constants in one chunk.
+[line 1] Error at 'v262': Too many constants in one chunk.
+[line 1] Error at 'v263': Too many constants in one chunk.
+[line 1] Error at 'v264': Too many constants in one chunk.
+[line 1] Error at 'v265': Too many constants in one chunk.
+[line 1] Error at 'v266': Too many constants in one chunk.
+[line 1] Error at 'v267': Too many constants in one chunk.
+[line 1] Error at 'v268': Too many constants in one chunk.
+[line 1] Error at 'v269': Too many constants in one chunk.
+[line 1] Error at 'v270': Too many constants in one chunk.
+[line 1] Error at 'v271': Too many constants in one chunk.
+[line 1] Error at 'v272': Too many constants in one chunk.
+[line 1] Error at 'v273': Too many constants in one chunk.
+[line 1] Error at 'v274': Too many constants in one chunk.
+[line 1] Error at 'v275': Too many constants in one chunk.
+[line 1] Error at 'v276': Too many constants in one chunk.
+[line 1] Error at 'v277': Too many constants in one chunk.
+[line 1] Error at 'v278': Too many constants in one chunk.
+[line 1] Error at 'v279': Too many constants in one chunk.
+[line 1] Error at 'v280': Too many constants in one chunk.
+[line 1] Error at 'v281': Too many constants in one chunk.
+[line 1] Error at 'v282': Too many constants in one chunk.
+[line 1] Error at 'v283': Too many constants in one chunk.
+[line 1] Error at 'v284': Too many constants in one chunk.
+[line 1] Error at 'v285': Too many constants in one chunk.
+[line 1] Error at 'v286': Too many constants in one chunk.
+[line 1] Error at 'v287': Too many constants in one chunk.
+[line 1] Error at 'v288': Too many constants in one chunk.
+[line 1] Error at 'v289': Too many constants in one chunk.
+[line 1] Error at 'v290': Too many constants in one chunk.
+[line 1] Error at 'v291': Too many constants in one chunk.
+[line 1] Error at 'v292': Too many constants in one chunk.
+[line 1] Error at 'v293': Too many constants in one chunk.
+[line 1] Error at 'v294': Too many constants in one chunk.
+[line 1] Error at 'v295': Too many constants in one chunk.
+[line 1] Error at 'v296': Too many constants in one chunk.
+[line 1] Error at 'v297': Too many constants in one chunk.
+[line 1] Error at 'v298': Too many constants in one chunk.
+[line 1] Error at 'v299': Too many constants in one chunk.
+300 globals: error
+Undefined variable 'v0'.
+[line 1] in script

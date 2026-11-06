@@ -1,0 +1,56 @@
+print "${drink} will be ready in ${steep + cool} minutes.";
+  TOKEN_PRINT          'print'
+  TOKEN_INTERPOLATION  ''
+  TOKEN_IDENTIFIER     'drink'
+  TOKEN_INTERPOLATION  ' will be ready in '
+  TOKEN_IDENTIFIER     'steep'
+  TOKEN_PLUS           '+'
+  TOKEN_IDENTIFIER     'cool'
+  TOKEN_STRING         ' minutes.'
+  TOKEN_SEMICOLON      ';'
+  TOKEN_EOF            ''
+
+"Nested ${"interpolation?! Are you ${"mad?!"}"}"
+  TOKEN_INTERPOLATION  'Nested '
+  TOKEN_INTERPOLATION  'interpolation?! Are you '
+  TOKEN_STRING         'mad?!'
+  TOKEN_STRING         ''
+  TOKEN_STRING         ''
+  TOKEN_EOF            ''
+
+"no interpolation"
+  TOKEN_STRING         'no interpolation'
+  TOKEN_EOF            ''
+
+"costs $5 {or more}"
+  TOKEN_STRING         'costs $5 {or more}'
+  TOKEN_EOF            ''
+
+"a ${ {b} } c"
+  TOKEN_INTERPOLATION  'a '
+  TOKEN_LEFT_BRACE     '{'
+  TOKEN_IDENTIFIER     'b'
+  TOKEN_RIGHT_BRACE    '}'
+  TOKEN_STRING         ' c'
+  TOKEN_EOF            ''
+
+"${a}${b}"
+  TOKEN_INTERPOLATION  ''
+  TOKEN_IDENTIFIER     'a'
+  TOKEN_INTERPOLATION  ''
+  TOKEN_IDENTIFIER     'b'
+  TOKEN_STRING         ''
+  TOKEN_EOF            ''
+
+"never closed ${x
+  TOKEN_INTERPOLATION  'never closed '
+  TOKEN_IDENTIFIER     'x'
+  TOKEN_ERROR          'Unterminated string interpolation.'
+  TOKEN_EOF            ''
+
+"never closed ${x} either
+  TOKEN_INTERPOLATION  'never closed '
+  TOKEN_IDENTIFIER     'x'
+  TOKEN_ERROR          'Unterminated string.'
+  TOKEN_EOF            ''
+

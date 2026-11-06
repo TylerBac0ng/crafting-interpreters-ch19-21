@@ -1,0 +1,16 @@
+true ? 1 : 2                     => 1
+false ? 1 : 2                    => 2
+nil ? 1 : 2                      => 2
+0 ? 1 : 2                        => 1
+1 + 1 == 2 ? 10 : 20             => 10
+1 < 2 ? 3 : 4 + 5                => 3
+(false ? 1 : 2) + 3              => 5
+false ? 1 : false ? 2 : 3        => 3
+false ? 1 : true ? 2 : 3         => 2
+true ? false ? 1 : 2 : 3         => 2
+true ? 1 : -nil                  => 1
+false ? -nil : 2                 => 2
+true ? -nil : 2                  => Operand must be a number.
+[line 1] in script
+true ? 1                         => [line 1] Error at ';': Expect ':' after then branch of conditional operator.
+true ? : 2                       => [line 1] Error at ':': Expect expression.

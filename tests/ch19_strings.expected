@@ -1,0 +1,25 @@
+string
+
+true
+true
+true
+false
+false
+one
+two
+Operands must be two numbers or two strings.
+[line 1] in script
+Operands must be two numbers or two strings.
+[line 1] in script
+Operand must be a number.
+[line 1] in script
+Operands must be numbers.
+[line 1] in script
+[line 1] Error: Unterminated string.
+first literal: 1 allocations
+same literal: 0 allocations, same object: yes
+finished duplicate is first: yes
+string that owns its characters: 1 allocations
+copy ends at length: yes
+sizeof(ObjString) = 24
+characters follow the header: yes

@@ -1,0 +1,5 @@
+var a = "from line one";
+print a;
+var b = a + " and two";
+print b;
+print "lit" + "eral";

@@ -1,0 +1,31 @@
+3
+beignets
+nil
+again
+assign
+assign
+6
+kept
+Undefined variable 'missing'.
+[line 1] in script
+Undefined variable 'missing'.
+[line 1] in script
+Undefined variable 'self'.
+[line 1] in script
+Undefined variable 'missing'.
+[line 1] in script
+now defined
+Undefined variable 'later'.
+[line 1] in script
+1
+[line 1] Error at '*': Expect ';' after variable declaration.
+[line 1] Error at '=': Invalid assignment target.
+[line 1] Error at '=': Invalid assignment target.
+[line 1] Error at '1': Expect variable name.
+[line 1] Error at ';': Expect expression.
+[line 1] Error at 'print': Expect ';' after value.
+[line 1] Error at end: Expect ';' after variable declaration.
+1000 uses of a: 0 constants
+300 globals: ok
+nil
+nil

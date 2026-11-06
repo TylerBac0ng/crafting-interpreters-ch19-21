@@ -1,0 +1,24 @@
+nil        (missing)
+nil        1
+true       2
+false      3
+1          4
+2.5        5
+"key"      6
+"1"        7
+3          (missing)
+"other"    (missing)
+set 1 again is new: no
+1          40
+-0         8
+hash(0) == hash(-0): yes
+NaN        (missing)
+delete nil: yes
+delete nil again: no
+nil        (missing)
+true       2
+found 50000 of 50000 after deleting half
+after churn: found 1000 of 1000, old key found: no, capacity small
+false      3
+2.5        5
+find string in mixed table: yes
